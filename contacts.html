@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти - ЕЛІНА</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-branding">💅 ELINA</a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Головна</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Послуги</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Галерея</a></li>
+        <li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+      </ul>
+     
+        <div class="hamburger">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Зв’яжіться з нами</h2>
+    <section class="contacts">
+      <form>
+        <label>Ім’я:<br><input type="text" name="name"></label>
+        <label>Email:<br><input type="email" name="email"></label>        
+        <label>Повідомлення:<br><textarea name="message"></textarea></label>
+        <button type="submit">Надіслати</button>
+      </form>
+
+      <div class="contact-info">
+        <p>Email: info@elina-salon.com</p>
+        <p>Телефон: +38 (099) 123-45-67</p>
+        <p>Адреса: вул. Бузкова, 10, Львів, Україна</p> 
+        <p>Працюємо: Пн-Сб: 10.00-19.00</p>
+        <p>Нд: вихідний день</p>     
+          
+        <img src="images/map.jpg" alt="Карта локації салону">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Салон «ЕЛІНА»</p>
+  </footer>
+  <script>
+        // Простий JavaScript для відкриття/закриття меню
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Закриття меню при виборі пункту (тільки для мобільної версії)
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+  </script>
+</body>
+</html>

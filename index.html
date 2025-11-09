@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна - ЕЛІНА</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-branding">💅 ELINA</a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Головна</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Послуги</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Галерея</a></li>
+        <li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+      </ul>
+     
+        <div class="hamburger">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Раді вітати вас у салоні манікюру «ЕЛІНА»</h1>
+      <p>Ми створюємо красу на ваших руках з любов’ю та професіоналізмом. Тут Ви знайдете висококваліфікованих майстрів, приємну атмосферу та веселий колектив, відмінний сервіс та гарне обслуговування. </p>
+      <img src="images/index.jpg" alt="Манікюр в салоні Еліна">
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Салон «ЕЛІНА». Усі права захищені.</p>
+  </footer>
+  <script>
+        // Простий JavaScript для відкриття/закриття меню
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Закриття меню при виборі пункту (тільки для мобільної версії)
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+  </script>
+</body>
+</html>

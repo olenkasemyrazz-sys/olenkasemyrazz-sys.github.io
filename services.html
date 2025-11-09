@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Послуги - ЕЛІНА</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-branding">💅 ELINA</a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Головна</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">Про нас</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Послуги</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Галерея</a></li>
+        <li class="nav-item"><a href="contacts.html" class="nav-link">Контакти</a></li>
+      </ul>
+     
+        <div class="hamburger">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Наші послуги</h2>
+    <section class="services-grid">
+      <div class="card">
+        <img src="images/service1.jpg" alt="Класичний манікюр">
+        <h3>Класичний манікюр</h3>
+        <p>Догляд за нігтями та кутикулою для здорових і красивих рук.</p>
+      </div>
+      <div class="card">
+        <img src="images/service2.jpg" alt="Гель-лак">
+        <h3>Гель-лак</h3>
+        <p>Стійке та яскраве покриття на будь-який смак.</p>
+      </div>
+      <div class="card">
+        <img src="images/service3.jpg" alt="Нарощування нігтів">
+        <h3>Нарощування</h3>
+        <p>Довгі та міцні нігті з ідеальною формою.</p>
+      </div>
+      <div class="card">
+        <img src="images/service4.jpg" alt="Дизайн нігтів">
+        <h3>Дизайн</h3>
+        <p>Художній розпис, камінці, трендові техніки.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Салон «ЕЛІНА»</p>
+  </footer>
+  <script>
+        // Простий JavaScript для відкриття/закриття меню
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Закриття меню при виборі пункту (тільки для мобільної версії)
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+  </script>
+</body>
+</html>
